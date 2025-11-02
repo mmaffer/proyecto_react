@@ -1,19 +1,81 @@
-# React + Vite
+# Rick & Morty Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web construida con React que consume la API pública de **Rick and Morty** para explorar personajes del multiverso. Incluye un listado filtrable, paginación con distintos tamaños de página, página de inicio con destacados y un formulario de contacto con validación en tiempo real.
 
-Currently, two official plugins are available:
+## Contenido
+- [Características](#características)
+- [Tecnologías](#tecnologías)
+- [API Utilizada](#api-utilizada)
+- [Requisitos Previos](#requisitos-previos)
+- [Instalación](#instalación)
+- [Scripts Disponibles](#scripts-disponibles)
+- [Estructura de Carpetas](#estructura-de-carpetas)
+- [Capturas de Pantalla](#capturas-de-pantalla)
+- [Consideraciones](#consideraciones)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
+- **Routing completo:** Home, Listado, Contacto y página 404 usando React Router DOM.
+- **Integración con API pública:** Axios con interceptores para manejo global de errores.
+- **Listado avanzado:** Filtros por nombre, estado y especie con persistencia en la URL.
+- **Paginación versátil:** Botones Previous/Next, navegación directa y selector de 10/20/50 elementos por página.
+- **Estados de UI robustos:** Indicadores de carga, mensajes de error amigables, feedback visual y diseño responsive con Bootstrap.
+- **Formulario accesible:** Validación en tiempo real, mensajes de éxito/error y reseteo tras envío.
 
-## React Compiler
+## Tecnologías
+- React 18 con Hooks
+- Vite 5
+- React Router DOM 6
+- Axios
+- Bootstrap 5
+- ESLint
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## API Utilizada
+- [The Rick and Morty API](https://rickandmortyapi.com/) – endpoint principal `https://rickandmortyapi.com/api/character`.
 
-Note: This will impact Vite dev & build performances.
+## Requisitos Previos
+- Node.js >= 18
+- npm >= 9
 
-## Expanding the ESLint configuration
+## Instalación
+1. Instala las dependencias del proyecto:
+   ```bash
+   npm install
+   ```
+2. Inicia el entorno de desarrollo:
+   ```bash
+   npm run dev
+   ```
+3. Abre <http://localhost:5173> en tu navegador preferido.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# proyecto_react" 
+## Scripts Disponibles
+- `npm run dev`: Ejecuta la aplicación en modo desarrollo.
+- `npm run build`: Genera los archivos para producción.
+- `npm run preview`: Previsualiza la build de producción.
+- `npm run lint`: Ejecuta las reglas de ESLint.
+
+## Estructura de Carpetas
+```
+src/
+├── components/
+│   ├── common/
+│   ├── contact/
+│   ├── home/
+│   └── list/
+├── hooks/
+├── pages/
+├── services/
+├── App.jsx
+└── main.jsx
+```
+
+## Capturas de Pantalla
+> Añade tus capturas en una carpeta `screenshots/` y actualiza las rutas si fuera necesario.
+
+- ![Home](screenshots/home.png)
+- ![Listado](screenshots/list.png)
+- ![Contacto](screenshots/contact.png)
+
+## Consideraciones
+- La paginación combina la paginación nativa de la API con un selector de tamaño de página para mejorar la experiencia de usuario.
+- Los filtros se sincronizan con la URL, permitiendo compartir enlaces con criterios aplicados.
+- Bootstrap se carga vía CDN; si prefieres Tailwind o estilos locales puedes adaptarlo fácilmente.
