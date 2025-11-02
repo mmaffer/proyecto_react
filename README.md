@@ -4,7 +4,7 @@ Este proyecto es una aplicación web de 3 páginas desarrollada con React como p
 
 ## 🚀 Deploy en Vivo
 
-**[Enlace a la aplicación desplegada](https://TU-LINK-DE-DEPLOY.com)**
+**https://6906e73c820bbb458919ad6f--funny-moonbeam-ddec61.netlify.app/**
 
 ---
 
@@ -107,8 +107,4 @@ Sigue estos pasos para levantar el proyecto en tu entorno local:
 
 ---
 
-## 👨‍💻 Autor
 
-* **[Tu Nombre Completo]**
-* **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
-* **LinkedIn**: [tu-linkedin](https://www.linkedin.com/in/tu-usuario/)
