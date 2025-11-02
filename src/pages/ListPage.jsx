@@ -1,29 +1,23 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { getCharacters } from "../../services/entityService.js";
-import LoadingSpinner from "../common/LoadingSpinner.jsx";
-import ErrorAlert from "../common/ErrorAlert.jsx";
+import { getCharacters } from "../services/entityService.js";
+import LoadingSpinner from "../components/common/LoadingSpinner.jsx";
+import ErrorAlert from "../components/common/ErrorAlert.jsx";
 
-
-
-
-function PopularSection() {
-  const [items, setItems] = useState([]);
+function ListPage() {
+  const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     let isMounted = true;
-    const fetchPopular = async () => {
+
+    const fetchCharacters = async () => {
       setLoading(true);
       setError(null);
       try {
-        const { items: characters } = await getCharacters({
-          page: 1,
-          pageSize: 20,
-        });
+        const { items } = await getCharacters({ page: 1, pageSize: 50 });
         if (!isMounted) return;
-        setItems(characters.slice(0, 6));
+        setCharacters(items);
       } catch (err) {
         if (!isMounted) return;
         setError(err);
@@ -32,48 +26,22 @@ function PopularSection() {
       }
     };
 
-    fetchPopular();
+    fetchCharacters();
+
     return () => {
       isMounted = false;
     };
   }, []);
 
-  if (loading) {
-    return (
-      <section className="py-5">
-        <div className="container">
-          <LoadingSpinner message="Cargando personajes destacados..." />
-        </div>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section className="py-5">
-        <div className="container">
-          <ErrorAlert message={error.message} />
-        </div>
-      </section>
-    );
-  }
+  if (loading) return <LoadingSpinner message="Cargando personajes..." />;
+  if (error) return <ErrorAlert message={error.message} />;
 
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5">
       <div className="container">
-        <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
-          <div>
-            <h2 className="h3 fw-bold mb-2">Personajes destacados</h2>
-            <p className="text-muted mb-0">
-              Una selección inicial para que empieces a explorar.
-            </p>
-          </div>
-          <Link to="/lista" className="btn btn-primary">
-            Ver listado completo
-          </Link>
-        </div>
+        <h2 className="h3 fw-bold mb-4">Todos los personajes</h2>
         <div className="row g-4">
-          {items.map((character) => (
+          {characters.map((character) => (
             <div className="col-12 col-sm-6 col-lg-4" key={character.id}>
               <div className="card h-100 shadow-sm">
                 <img
@@ -102,4 +70,4 @@ function PopularSection() {
   );
 }
 
-export default PopularSection;
+export default ListPage;
