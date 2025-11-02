@@ -68,14 +68,4 @@ src/
 └── main.jsx
 ```
 
-## Capturas de Pantalla
-> Añade tus capturas en una carpeta `screenshots/` y actualiza las rutas si fuera necesario.
-
-- ![Home](screenshots/home.png)
-- ![Listado](screenshots/list.png)
-- ![Contacto](screenshots/contact.png)
-
-## Consideraciones
-- La paginación combina la paginación nativa de la API con un selector de tamaño de página para mejorar la experiencia de usuario.
-- Los filtros se sincronizan con la URL, permitiendo compartir enlaces con criterios aplicados.
-- Bootstrap se carga vía CDN; si prefieres Tailwind o estilos locales puedes adaptarlo fácilmente.
+### Chiribayas 11
