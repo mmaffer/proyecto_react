@@ -4,7 +4,7 @@ Este proyecto es una aplicación web de 3 páginas desarrollada con React como p
 
 ## 🚀 Deploy en Vivo
 
-**https://6906e73c820bbb458919ad6f--funny-moonbeam-ddec61.netlify.app/**
+**https://proyectorickymortyreact.netlify.app/**
 
 ---
 
