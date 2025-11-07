@@ -11,9 +11,13 @@ Este proyecto es una aplicación web de 3 páginas desarrollada con React como p
 ## 📸 Capturas de Pantalla
 
 | HomePage | Página de Listado (con filtros) | Formulario de Contacto |
-| :---: | :---: | :---: |
-| [Imagen de la Homepage] | [Imagen de la Página de Listado] | [Imagen del Formulario de Contacto] |
-| *Vista principal con sección hero y personajes destacados.* | *Grid responsivo con filtros, búsqueda y paginación.* | *Formulario con validación en tiempo real.* |
+
+<img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/0064a2df-ea4f-4f3c-9a23-0c1e7c21b7bb" />
+<img width="1908" height="890" alt="image" src="https://github.com/user-attachments/assets/3df08dd6-ffde-4389-9031-d2afb09caed9" />
+<img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/9eef9526-e46b-463d-b8fb-7db3852ca36d" />
+<img width="1910" height="916" alt="image" src="https://github.com/user-attachments/assets/c3f10e6b-4514-4226-8099-e5fd8ff57447" />
+
+
 
 ---
 
@@ -55,19 +59,12 @@ Sigue estos pasos para levantar el proyecto en tu entorno local:
     npm install
     ```
 
-4.  **Configurar variables de entorno:**
-    Crea un archivo `.env` en la raíz del proyecto y añade la URL base de la API (aunque esta API es pública, es una buena práctica).
-
-    ```.env
-    VITE_API_BASE_URL=[https://rickandmortyapi.com/api](https://rickandmortyapi.com/api)
-    ```
-
-5.  **Ejecutar la aplicación:**
+4.  **Ejecutar la aplicación:**
     ```bash
     npm run dev
     ```
 
-6.  Abre [http://localhost:5173](http://localhost:5173) (o el puerto que indique la consola) en tu navegador.
+5.  Abre [http://localhost:5173](http://localhost:5173) (o el puerto que indique la consola) en tu navegador.
 
 ---
 
